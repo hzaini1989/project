@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC默认竖屏 ，UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <meta name="browsermode" content="application">
+    <!-- QQ强制竖屏 QQ强制全屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="x5-page-mode" content="app">
+    <title>日历</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="css/calendar.css"/>
+</head>
+<body>
+    <div class="uzai-container">
+        <!--日历部分-->
+        <div class="uzai-calender">
+            <div class="red-bg">
+                <div class="uzai-header">
+                    <i class="iconfont icon-back"></i>
+                    <b>选择日期</b>
+                </div>
+                <div class="switch-btn">
+                    <b class="left"></b>
+                    <b class="right"></b>
+                    <div class="center">
+                        <i class="circle"></i>
+                        <p>
+                            <span class="month"></span>
+                        <span class="year">
+                            <b>月</b><br/>
+                            <b></b>
+                        </span>
+                        </p>
+                        <i class="circle"></i>
+                    </div>
+                </div>
+
+                <i class="triangles"></i>
+                <!--星期-->
+                <div class="calendar-week">
+                    <ul class="week-list"></ul>
+                </div>
+
+            </div>
+            <div class="container-center">
+
+                <div class="device">
+                    <a class="arrow-left" href="#"></a>
+                    <a class="arrow-right" href="#"></a>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper box-center" id="list">
+
+                        </div>
+                    </div>
+                    <div class="pagination"></div>
+                </div>
+                <!--库存-->
+                <div class="stock zHide"><b class="m">6</b>月<b class="d">10</b>日出发仅剩<b class="nums"> 4 </b>个余位</div>
+            </div>
+        </div>
+
+        <!--优惠活动部分-->
+        <div class="uzai-discount zHide">
+            <div class="uzai-main">
+                <div class="dis-title ">
+                    <span class="left fl">
+                        <i class="iconfont icon-discount"></i>
+                        <b>优惠活动</b>
+                    </span>
+                    <span class="right fr">
+                        <b>5</b>
+                        <i class="iconfont icon-right"></i>
+                    </span>
+                </div>
+                <ul class="dis-list">
+                    <li class="clearfix">
+                        <i>抵积分</i>
+                        <b>在线立减100元100元</b>
+                    </li>
+                    <li class="clearfix">
+                        <i>抵用劵</i>
+                        <b>在线立减100元100元</b>
+                    </li>
+                    <li class="clearfix">
+                        <i>抵劵</i>
+                        <b>在线立减100元100元</b>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!--选择出行人数-->
+        <div class="uzai-numbers zHide">
+            <div class="people-main">
+                <div class="dis-title ">
+                    <span class="left fl">
+                        <i class="iconfont icon-chuxingrenshu"></i>
+                        <b>选择出行人数</b>
+                    </span>
+                </div>
+                <ul class="people-choose number-people">
+                    <li class="clearfix myActive">
+                        <span class="left fl">
+                            <b>成人</b>
+                            <i>?</i>
+                            <b><em>5899</em>/人</b>
+                        </span>
+                        <span class="right fr">
+                            <i class="aLess">－</i>
+                            <b id="adult">1</b>
+                            <i class="aAdd">＋</i>
+                        </span>
+                    </li>
+                    <li class="clearfix">
+                        <span class="left fl">
+                            <b>儿童</b>
+                            <i>?</i>
+                            <b><em>5899</em>/人</b>
+                        </span>
+                        <span class="right fr">
+                             <i class="cLess">－</i>
+                            <b id="child">0</b>
+                            <i class="cAdd">＋</i>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="uzai-footer">
+            <ul>
+                <li class="no-taunts">
+                    请选择出游団期
+                </li>
+                <li>
+                    <span><b>A</b>行程</span>
+                </li>
+                <li>
+                    <i>下一步</i>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!--遮罩层-->
+    <div class="cal-mask zHide"></div>
+    <!--弹窗内容-->
+    <div id="cal-pop" class="zHide">
+        <div class="pop-container">
+            <img src="../../images/library/pop_03.png" alt="" class="title"/>
+            <h4>起价说明</h4>
+            <div class="tips">
+                本起价是可选出发日期中，按2人出行共住一间房核算的最低单人价格。产品价格会根据您所选择的出发日期、出行人数、入住酒店房型、航班或交通以及所选附加服务的不同而有所差别。
+            </div>
+        </div>
+        <i class="iconfont icon-guanbi"></i>
+
+    </div>
+
+
+</body>
+
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>ß
+<script src="js/swiper.min.js"></script>
+<script src="js/calendar.js"></script>
+</html>
