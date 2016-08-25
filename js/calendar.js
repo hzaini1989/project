@@ -38,7 +38,7 @@
                 dayLi += '<li class="new"></li>';
             } else if (i >= curMonthWeek && i <= curMonthDate + curMonthWeek) {
 
-                dayLi += '<li data-time=' + nYear + '-' + nMonth + '-' + (i - curMonthWeek) + '><p class="text">' + (i - curMonthWeek) + '</p><p class="end"></p><p class="price"></p><p class="dingwei"><i class="chinas hide">●</i><i class="locals hide">●</i></p><p class="jieqi"></p></li>';
+                dayLi += '<li data-time=' + nYear + '-' + nMonth + '-' + (i - curMonthWeek) + '><p class="text">' + (i - curMonthWeek) + '</p><p class="end"></p><p class="price"></p><p class="dingwei"><i class="chinas zHide">●</i><i class="locals zHide">●</i></p><p class="jieqi"></p></li>';
             } else {
                 dayLi += '<li class="old"></li>';
             }

@@ -1,4 +1,5 @@
 *{margin: 0;padding: 0;}
+ul li{list-style: none}
 .clearfix:after {
   clear: both;
   display: block;
@@ -29,7 +30,9 @@ b {
   .uzai-container .uzai-calender .red-bg {
     padding-top: 1rem;
     background: -webkit-gradient(linear, 0% 0%, 100% 100%, from(#FF2F60), to(#FF7759));
-    background: linear-gradient(to right, #FF2F60, #FF7759); }
+    background: linear-gradient(to right, #FF2F60, #FF7759); 
+    font-size: .3rem;
+    }
   .uzai-container .uzai-calender .uzai-header {
     width: 100%;
     height: 1rem;
