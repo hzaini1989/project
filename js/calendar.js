@@ -93,9 +93,9 @@
     $('[data-time=2016-7-22]').addClass('off').find('.end').text('售罄').css('margin-top','-.2rem').siblings('.price').text('¥1999').css('margin-top','-.05rem');
     // 价格
     $('[data-time=2016-7-29]').addClass('on').find('.price').text('¥3999').css('margin-top','-.25rem');
-    $('[data-time=2016-7-30]').addClass('on').find('.price').text('¥3999').css('margin-top','-.25rem');
-    $('[data-time=2016-8-1]').addClass('on').find('.price').text('¥3999').css('margin-top','-.25rem');
-    $('[data-time=2016-8-8]').addClass('on').find('.price').text('¥3999').css('margin-top','-.25rem');
+    $('[data-time=2016-11-3]').addClass('on').find('.price').text('¥3999').css('margin-top','-.25rem');
+    $('[data-time=2016-10-1]').addClass('on').find('.price').text('¥3999').css('margin-top','-.25rem');
+    $('[data-time=2016-9-20]').addClass('on').find('.price').text('¥3999').css('margin-top','-.25rem');
 
 
     $('body').on('click','.day-list .on',function(e){   // 有団期的有价格的可以点击
